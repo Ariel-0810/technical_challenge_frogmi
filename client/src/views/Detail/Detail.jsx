@@ -8,17 +8,17 @@ import { postComment } from '../../redux/actions/actions';
 const Detail = () => {
     const { id } = useParams();
     const [detail, setDetail] = useState({});
-    const [loading, setLoading] = useState(true); 
+    const [loading, setLoading] = useState(true);
     const [commentText, setCommentText] = useState('');
     const [comments, setComments] = useState([]);
     const dispatch = useDispatch();
 
-    useEffect(() => {        
+    useEffect(() => {
         fetch(`http://localhost:3000/api/v1/features/${id}`)
             .then(response => response.json())
             .then(data => {
-                setDetail(data); 
-                setLoading(false); 
+                setDetail(data);
+                setLoading(false);
             })
             .catch(error => {
                 console.error('Error fetching detail:', error);
@@ -28,7 +28,7 @@ const Detail = () => {
         fetch(`http://localhost:3000/api/v1/features/${id}comments`)
             .then(response => response.json())
             .then(data => {
-                setComments(data.comments); 
+                setComments(data.comments);
             })
             .catch(error => {
                 console.error('Error fetching comments:', error);
@@ -84,22 +84,23 @@ const Detail = () => {
                     </a>
                 </p>
             )}
-            <h3>Comentarios: </h3>
+            <h3>Comments: </h3>
             <form className={styles.commentForm} onSubmit={handleCommentSubmit}>
                 <div className={styles.commentList}>
-                {comments.map(comment => (
-                    <div key={comment.id} className={styles.commentItem}>
-                        <p>{comment.body}</p>
-                    </div>
-                ))}
+                    {comments.map(comment => (
+                        <div key={comment.id} className={styles.commentItem}>
+                            <p>{comment.body}</p>
+                        </div>
+                    ))}
                 </div>
                 <textarea
-                className={styles.commentTextarea}
+                    className={styles.commentTextarea}
                     value={commentText}
                     onChange={(e) => setCommentText(e.target.value)}
-                    placeholder="Escribe un comentario..."
+                    placeholder="Write a comment..."
                 />
-                <button className={styles.commentButton} type="submit">Agregar Comentario</button>
+                <button className={styles.commentButton} type="submit">Add comment
+                </button>
             </form>
         </div>
     );
