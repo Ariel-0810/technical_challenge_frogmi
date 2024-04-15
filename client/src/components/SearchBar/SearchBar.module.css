@@ -1,0 +1,18 @@
+.serchContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    width:100%;
+    height: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border: 3px solid orange
+
+}
+
+.iconNav{
+    padding: 10px;
+}
