@@ -1,0 +1,25 @@
+.mag_type_dropdown_container {
+    margin-bottom: 5px;
+    margin-top: 8px;
+    border-radius: 0.5px;
+  }
+  
+  .mag_type_label {
+    margin-top: 0.5px;
+    margin-right: 30px;
+  }
+  
+  .mag_type_select {
+    width: 200px;
+    padding: 10px;
+  }
+  
+  .filtered_features_list {
+    list-style-type: none;
+    padding: 0px;
+  }
+  
+  .feature_item {
+    margin-bottom: 3px;
+  }
+  

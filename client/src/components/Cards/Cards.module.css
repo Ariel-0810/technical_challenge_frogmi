@@ -1,0 +1,48 @@
+.containerCard {   
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 5px;
+}
+
+.pagination_top,
+.pagination_bottom {
+  margin-bottom: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination_bottom button{
+  margin-left: 10px;
+}
+
+.pagination_bottom button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #a9b9a8;
+  color: #333;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination_bottom button:hover {
+  background-color: #ddd;
+}
+
+.pagination_bottom button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination_bottom .active {
+  font-weight: bold;
+  color: #007bff;
+}
