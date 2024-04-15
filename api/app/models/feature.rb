@@ -1,3 +1,4 @@
+# feature.rb
 class Feature < ApplicationRecord
   has_many :comments
   validates_presence_of :title, :url, :place, :mag_type, :latitude, :longitude
@@ -8,12 +9,10 @@ class Feature < ApplicationRecord
   validates :longitude, numericality: { greater_than_or_equal_to: -180.0, less_than_or_equal_to: 180.0 }
 
   scope :filter_by_mag_type, ->(mag_type) { where(mag_type: mag_type) if mag_type.present? }
-  scope :my_paginate, ->(page, per_page) { page(page).per(per_page) }
 
   def self.filter(options = {})
     features = all
     features = features.filter_by_mag_type(options[:mag_type]) if options[:mag_type].present?
-    features = features.my_paginate(options[:page], options[:per_page]) if options[:page].present? && options[:per_page].present?
     features
   end
 
@@ -63,5 +62,3 @@ class Feature < ApplicationRecord
     end
   end
 end
-
-

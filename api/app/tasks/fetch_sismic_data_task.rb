@@ -8,7 +8,7 @@ class FetchSismicDataTask
 
     puts "Starting data retrieval..."
     data['features'].each do |feature|
-      puts "Creating feature from GeoJSON: #{feature}"
+      puts "Creating feature from GeoJSON: "
       Feature.create_from_geojson(feature)
     end
     puts "Data retrieval completed."

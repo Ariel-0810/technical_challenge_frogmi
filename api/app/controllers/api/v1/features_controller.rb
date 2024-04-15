@@ -1,11 +1,22 @@
+# feature_controller.rb
 module Api
   module V1
     class FeaturesController < ApplicationController
       def index
-        @features = Feature.filter(params.slice(:mag_type, :page, :per_page)).includes(:comments)
+        page = params[:page] || 1
+        per_page = params[:per_page] || 10
+        @features = Feature.filter(params.permit(:mag_type)).includes(:comments).paginate(page: page, per_page: per_page)
         render json: {
           data: @features.map { |feature| format_feature(feature) }
         }
+      end
+
+      def show
+        @feature = Feature.find(params[:id])
+        @comments = @feature.comments
+        render json: @feature, include: :comments
+      rescue ActiveRecord::RecordNotFound
+        render json: { error: 'Feature not found' }, status: :not_found
       end
     
       private
