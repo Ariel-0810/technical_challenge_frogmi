@@ -1,45 +1,3 @@
-// import React from 'react'
-
-// import { useEffect} from 'react'
-
-// import { useDispatch } from 'react-redux'
-// import { getAllCountries } from "../../redux/actions/actions"
-
-// import Card from '../Card/Card'
-
-
-// const Cards = ({ countries, onClose }) => { 
-  
-//   const dispatch = useDispatch();
-
-
-
-//   useEffect(() => {
-//     if (!countries.length) {
-//         dispatch(getAllCountries())
-//     }
-//   }, [dispatch, countries.length]);
-
-//   return (
-//     <div className={styles.containerCard}>
-//       {countries.map((country) => (
-//         <Card
-//           key={country.id} 
-//           img={country.flag}
-//           name={country.name}
-//           continent={country.continent}
-//           id = {country.id} 
-//           onClose= {() => onClose(country.id)}
-//         /> 
-        
-//       ))}
-//     </div>
-//   )
-// }
-
-// export default Cards;
-
-// Cards.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../Card/Card';
@@ -104,8 +62,7 @@ const Cards = () => {
         </button>
       </div>
     </div>
-  );
-  
+  );  
 };
 
 export default Cards;

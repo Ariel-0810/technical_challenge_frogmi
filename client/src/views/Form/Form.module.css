@@ -69,7 +69,6 @@
   }
   
   .btnX {  
-    /* TODO arreglar porque no queda bien alineado verticalmente */
     display: flex;
     align-items: center; 
     padding: 5px 1rem;

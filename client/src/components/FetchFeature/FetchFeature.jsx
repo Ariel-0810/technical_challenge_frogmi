@@ -1,7 +1,6 @@
-// MagTypeDropdown.jsx
 import styles from "./FetchFeatures.module.css"
 import React, { useState, useEffect } from 'react';
-import fetchFeatures from '../../utils/api'; // Ajusta la ruta según la ubicación de tu archivo api.js
+import fetchFeatures from '../../utils/api';
 
 const MagTypeDropdown = () => {
   const [selectedMagTypes, setSelectedMagTypes] = useState([]);
@@ -9,7 +8,6 @@ const MagTypeDropdown = () => {
   const [filteredFeatures, setFilteredFeatures] = useState([]);
 
   useEffect(() => {
-    // Filtrar características cuando cambian los tipos seleccionados
     const filtered = features.filter(feature => {
       return selectedMagTypes.some(type => feature.attributes.mag_type && feature.attributes.mag_type.includes(type));
     });
@@ -22,7 +20,6 @@ const MagTypeDropdown = () => {
   };
 
   useEffect(() => {
-    // Obtener todas las características inicialmente
     const fetchData = async () => {
       try {
         const data = await fetchFeatures();

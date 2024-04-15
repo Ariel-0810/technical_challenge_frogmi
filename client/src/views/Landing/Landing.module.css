@@ -1,8 +1,5 @@
 .landingContainer{
     display: flex;
-    /* background: url("../../img/mapa2.png");
-    background-repeat: no-repeat;
-    height: 100vh; */
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -12,7 +9,7 @@
     flex-direction: column; 
   }
   
-  .mapa{  /* TODO: Arreglar el salto de la imagen */
+  .mapa{
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -22,7 +19,7 @@
     background: url("../../img/mapa2.png");
     background-size: cover;
     animation: tierra-girando 5s infinite linear;
-    -webkit-animation: tierra-girando 10s infinite linear; /* para navegadores Safari/Chrome antiguos */
+    -webkit-animation: tierra-girando 10s infinite linear;
     }
   
     @keyframes tierra-girando{
@@ -35,9 +32,9 @@
   
   .titleLanding {
     color: black;
-    background: #fffc00;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F9F54B, #f9f8a4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F9F54B,#f9f8a4 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #fffc00;
+    background: -webkit-linear-gradient(to right, #F9F54B, #f9f8a4);
+    background: linear-gradient(to right, #F9F54B,#f9f8a4 );
     border-radius: 1rem;
     width:35%;
     margin-top: -80px;
@@ -48,9 +45,9 @@
     
   .h3 {
     color: white;
-    background: #000000; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #000000, #434343); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #000000, #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000000;
+    background: -webkit-linear-gradient(to right, #000000, #434343);
+    background: linear-gradient(to right, #000000, #434343);
     border-radius: 0.5rem;
     width: 20%;
     margin-top: 2%;

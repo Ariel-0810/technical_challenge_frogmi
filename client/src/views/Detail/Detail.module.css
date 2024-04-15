@@ -34,22 +34,22 @@
 .commentTextarea {
   width: 100%;
   height: 100px;
-  resize: vertical; /* Permite redimensionar verticalmente el textarea */
+  resize: vertical;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 
 .commentButton {
-  background-color: #007bff; /* Color de fondo */
-  color: #fff; /* Color del texto */
-  border: none; /* Quita el borde */
-  padding: 10px 20px; /* Espaciado interno */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
   border-radius: 5px;
 }
 
 .commentButton:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+  background-color: #0056b3;
 }
 
   
