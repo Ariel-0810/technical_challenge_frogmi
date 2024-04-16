@@ -30,9 +30,15 @@ const Cards = () => {
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 10; i++) {
       pageNumbers.push(
-        <button key={i} onClick={() => setCurrentPage(i)}>{i}</button>
+        <button
+          key={i}
+          className={currentPage === i ? styles.activePage : styles.pageNumber}
+          onClick={() => setCurrentPage(i)}
+        >
+          {i}
+        </button>
       );
     }
     return pageNumbers;
@@ -47,7 +53,7 @@ const Cards = () => {
       </div>
       <div className={styles.pagination_bottom}>
         <button
-          className={styles.paginationButton}
+          className={styles.pagination_bottom}
           onClick={handlePreviousPage}
           disabled={currentPage === 1}
         >
@@ -55,7 +61,7 @@ const Cards = () => {
         </button>
         {renderPageNumbers()}
         <button
-          className={styles.paginationButton}
+          className={styles.pagination_bottom}
           onClick={handleNextPage}
         >
           Next Page

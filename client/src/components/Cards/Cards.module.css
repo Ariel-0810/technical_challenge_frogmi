@@ -21,9 +21,10 @@
 
 .pagination_bottom button{
   margin-left: 10px;
+  border-radius: 5px;
 }
 
-.pagination_bottom button {
+.paginationButton {
   margin: 0 5px;
   padding: 8px 16px;
   border: 1px solid #ccc;
@@ -45,4 +46,9 @@
 .pagination_bottom .active {
   font-weight: bold;
   color: #007bff;
+}
+
+.activePage {
+  background-color: #007bff;
+  color: white;
 }

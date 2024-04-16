@@ -52,4 +52,23 @@
   background-color: #0056b3;
 }
 
-  
+.eslink {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  background: #FFED00;
+  color: black;
+  font-size: 1rem;
+  border-radius: 100rem;
+  transition: 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.eslink:hover {
+  outline-offset: 4.5px;
+  background: #3F979B;
+}
