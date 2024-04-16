@@ -83,10 +83,9 @@ const Detail = () => {
                 <p>Tsunami: {detail.tsunami ? 'YES' : 'No'}</p>
                 <p>Mag Type: {detail.mag_type}</p>
                 <p>Magnitude: {detail.magnitude}</p>
-                <p>Coordinates:</p>
-                <p>Coordinates:</p>
+                <h4>Coordinates:</h4>
                 <p>Latitude: {detail.latitude}</p>
-                <p>Longitud: {detail.longitude}</p>
+                <p>Longitude: {detail.longitude}</p>
                 {detail.url && (
                     <p style={styles.link}>
                         <a href={detail.url} target="_blank" rel="noopener noreferrer">
